@@ -1,12 +1,18 @@
 <html>
   <head>
-    <link href="" rel="stylesheet"/>
     <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <script type="text/javascript" src="assets/angular/angular.js"></script>
+
+    <link rel="stylesheet" href="http://leafletjs.com/dist/leaflet.css" />
+
     <script type="text/javascript" src="assets/angular-bootstrap/ui-bootstrap.js"></script>
+    <style>
+      #map {
+          height: 300px;
+        }
+      </style>
   </head>
-  <body ng-app="humdrum">
-    <h6> Humdrum. </h6>
+  <body ng-app="webgis">
+    <h6> Webgis </h6>
     <div ng-controller="UserProfileController">
       <div class="btn btn-primary"  ng-click="fetchuser()"> Fetch </div>
       <br>
@@ -14,7 +20,9 @@
       <img src="{{pic}}"/>
 
     </div>
+    <div id="map"></div>
 
-      <script type="text/javascript" src="js/dist.js"></script>
+    <script type="text/javascript" src="js/dist.js"></script>
+    
   </body>
 </html>
